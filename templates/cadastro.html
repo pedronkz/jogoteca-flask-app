@@ -1,0 +1,54 @@
+{% extends "template.html" %}
+{% block conteudo %}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-8 col-lg-6">
+        <div class="card shadow-lg border-0 rounded-lg">
+            
+            <div class="card-header bg-primary text-white text-center py-3">
+                <h3 class="font-weight-light my-0">Criar Nova Conta</h3>
+            </div>
+            
+            <div class="card-body p-4">
+                <form action="{{ url_for('cadastrar') }}" method="post">
+                    
+                    <div class="form-group mb-3">
+                        <label for="nome" class="font-weight-bold text-secondary small text-uppercase">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" class="form-control form-control-lg" placeholder="Ex: Pedro Ferreira" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="nickname" class="font-weight-bold text-secondary small text-uppercase">Nickname</label>
+                                <input type="text" id="nickname" name="nickname" class="form-control form-control-lg" placeholder="Usuário de Login" required>
+                                <small class="form-text text-muted">Será usado para entrar no sistema.</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-4">
+                                <label for="senha" class="font-weight-bold text-secondary small text-uppercase">Senha</label>
+                                <input type="password" id="senha" name="senha" class="form-control form-control-lg" placeholder="Crie uma senha forte" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a class="btn btn-outline-secondary" href="{{ url_for('login') }}">
+                            Voltar
+                        </a>
+                        <button type="submit" class="btn btn-success btn-lg px-5">
+                            Cadastrar
+                        </button>
+                    </div>
+                    
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}

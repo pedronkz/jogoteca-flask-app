@@ -1,0 +1,42 @@
+{% extends "template.html" %}
+{% block conteudo %}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow-lg border-0 rounded-lg">
+            
+            <div class="card-header bg-primary text-white text-center py-3">
+                <h3 class="font-weight-light my-0">Login Jogoteca</h3>
+            </div>
+            
+            <div class="card-body p-4">
+                <form method="POST" action="{{ url_for('autenticar') }}">
+                    <input type="hidden" name="proxima" value="{{ proxima }}">
+                    
+                    <div class="form-group mb-3">
+                        <label class="font-weight-bold text-secondary">Usuário</label>
+                        <input class="form-control form-control-lg" type="text" name="usuario" placeholder="Seu nickname" required>
+                    </div>
+                    
+                    <div class="form-group mb-4">
+                        <label class="font-weight-bold text-secondary">Senha</label>
+                        <input class="form-control form-control-lg" type="password" name="senha" placeholder="Sua senha" required>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-lg btn-block w-100" type="submit">Entrar</button>
+                </form>
+            </div>
+            
+            <div class="card-footer text-center py-3">
+                <div class="small">
+                    <a href="{{ url_for('cadastro') }}" class="text-decoration-none">
+                        Não tem conta? <strong>Cadastre-se aqui</strong>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}
