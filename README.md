@@ -6,16 +6,6 @@ A full-stack web application built with **Python** and **Flask** to manage a cur
 ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-## 📸 Screenshots
-
-| Login Page | Game Library |
-|:---:|:---:|
-| ![Login Screen](screenshots/login.png) | ![Library Screen](screenshots/lista.png) |
-| **User Registration** | **Add New Game** |
-| ![Registration Screen](screenshots/cadastro.png) | ![New Game Screen](screenshots/novojogo.png) |
-
-> *Note: Place your screenshots in a folder named `screenshots` or update the paths above.*
-
 ## 🚀 Features
 
 * **User Authentication:** Secure Login and Logout system.
